@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Sevillana&family=Teko:wght@300;400;500;600&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto+Mono', sans-serif;
+}
+
+@import 'mixins';
+@import 'variables';
+
+nav {
+    width: 100%;
+    background-color: $navbg;
+    padding: 10px 0px
+}
+
+.nav-containt {
+    @include flex(row, space-between, center);
+    width: 90%;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.logo {
+    img {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+ul {
+    @include flex(row, center, center);
+    gap: 20px;
+
+    li {
+        font-size: 25px;
+        color: $navtext;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    height: 90vh;
+    @include flex(row, center, center);
+}
+
+.form_div {
+
+    box-shadow: 1px 1px 1px #cfc6c6, -1px -1px 1px #cfc6c6;
+    padding: 30px 25px;
+
+    h1 {
+        text-align: center;
+        font-size: 35px;
+        color: $navbg
+    }
+}
+
+form {
+    @include flex(column, flex-start, flex-start);
+    gap: 10px;
+    margin-top: 10px;
+
+    .btn-group {
+        @include flex(default, center, center);
+        width: 100%;
+
+        button {
+            width: 120px;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px 20px;
+            border: none;
+            color: $navtext;
+            background-color: $navbg ;
+            margin-top: 20px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #000000;
+                transition: 0.5s;
+                transform: scale(1.05) ;
+            }
+        }
+    }
+}
+
+.same {
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
+
+    label {
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    input {
+        width: 95%;
+        padding: 3px 0px 2px 10px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 2px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
